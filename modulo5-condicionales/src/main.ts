@@ -8,16 +8,15 @@ const generarNumeroAleatorio = () : number => {
 };
 
 const damePuntosEnTexto = (puntos : number) : string => {
-    // Obtengo el entero de los puntos
-    // let texto : string = ' ';
+
     const enteroPuntos : number = Math.floor(puntos);
 
     // Si el entero no es igual a los puntos, es que hay una parte que es media.
     if (enteroPuntos != puntos) {
-        return enteroPuntos === 0 ? `Media` : `${enteroPuntos} y media`;
+        return enteroPuntos == 0 ? `Media` : `${enteroPuntos} y media`;
     };
     // Si la puntuacion no tiene decimales, la pongo tal cual
-    return `${puntuacion}`;
+    return `${puntos}`;
 };
 
 const muestraTexto = (id: string, texto: string) : void => {
@@ -39,9 +38,9 @@ const muestraPuntuacionSimular = (puntuacionSimular : number) : void => {
     let mensajeSimular : string = ' ';
     mensajeSimular = `Si hubieras pedido otra, habrías hecho ${damePuntosEnTexto(puntuacionSimular)}!!`;
 
-    if (puntuacionSimular < 7.5) {
+    if (puntuacionSimular < MAXIMO_PUNTOS) {
         mensajeSimular += ' No habrías llegado igualmente!';
-    } else if (puntuacionSimular > 7.5) {
+    } else if (puntuacionSimular > MAXIMO_PUNTOS) {
         mensajeSimular += ' Habrías perdido!';
     } else {
         mensajeSimular += ' Habrías ganado!! OHH!!';
@@ -119,7 +118,7 @@ const gestionarGameOver = (puntos: number) : void => {
             muestraTexto("mensaje", '¡¡7 y media!! ¡Lo has clavado! ¡Enhorabuena!');
         } else {
             muestraTexto("puntuacion", ' ');
-            muestraTexto("mensaje", `Ohh! Te has pasado! Has llegado a ${damePuntosEnTexto(puntuacion)}.`);            
+            muestraTexto("mensaje", `Ohh! Te has pasado! Has llegado a ${damePuntosEnTexto(puntos)}.`);            
         };
     };
 };
