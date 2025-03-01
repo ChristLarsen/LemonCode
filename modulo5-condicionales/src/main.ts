@@ -7,6 +7,10 @@ const generarNumeroAleatorio = () : number => {
     return numero;
 };
 
+const consoleErrorID = (funcion : string, id : string) : void => {
+    console.error(`${funcion}: No se ha encontrado el elemento con ID ${id}.`);
+};
+
 const damePuntosEnTexto = (puntos : number) : string => {
 
     const enteroPuntos : number = Math.floor(puntos);
@@ -26,8 +30,8 @@ const muestraTexto = (id: string, texto: string) : void => {
     if (elemento) {
         elemento.innerHTML = texto;
     } else {
-        console.error(`muestraTexto: No se ha encontrado elemento con ID ${id}.`);
-    }
+        consoleErrorID('muestraTexto', id);
+    };
 };
 
 const muestraPuntuacion = () : void => {
@@ -90,8 +94,8 @@ const muestraCarta = (numero: number) : void => {
                 break;
         };
     } else {
-        console.error('muestraCarta: No se ha encontrado elemento con ID "carta"');
-    }    
+        consoleErrorID('muestraCarta', 'carta');
+    };
 };
 
 const deshabilitaBoton = (id : string) : void => {
@@ -126,11 +130,7 @@ const gestionarGameOver = (puntos: number) : void => {
 const handleDameCarta = () : void => {
     const numero : number = generarNumeroAleatorio();
     muestraCarta(numero);
-    if (numero >= 10) {
-        puntuacion += 0.5;
-    } else {
-        puntuacion += numero;
-    }
+    puntuacion = (numero >= 10) ? puntuacion + 0.5 : puntuacion + numero;
     habilitaBoton("plantarse");
     muestraPuntuacion();
     gestionarGameOver(puntuacion);
@@ -142,18 +142,20 @@ const handleCompruebaMePlanto = () : void => {
     habilitaBoton("iniciar");
     habilitaBoton("simular");
     muestraTexto("puntuacion", " ");
+    let textoMensaje = `Has conseguido ${damePuntosEnTexto(puntuacion)}`;
     switch (puntuacion) {
         case 5:
-            muestraTexto("mensaje", `Has conseguido ${damePuntosEnTexto(puntuacion)} ... Te ha entrago el cangelo eh??`);
+            textoMensaje += '... Te ha entrago el cangelo eh??';
             break;
         case 6:
         case 7:
-            muestraTexto("mensaje", `Has conseguido ${damePuntosEnTexto(puntuacion)} ... Casi casi....!!`);
+            textoMensaje += '... Casi casi....!!';
             break;
         default:
-            muestraTexto("mensaje", `Has conseguido ${damePuntosEnTexto(puntuacion)} ... Has sido demasiado conservador!!`);
+            textoMensaje += ' ... Has sido demasiado conservador!!';
             break;
     };
+    muestraTexto("mensaje", textoMensaje);
 };
 
 const handleIniciar = () : void => {
@@ -187,26 +189,26 @@ const botonDameCarta = document.getElementById("damecarta");
 if (botonDameCarta) {
     botonDameCarta.addEventListener("click", handleDameCarta);
 } else {
-    console.error('botonDameCarta: No se ha encontrado elemento con ID "damecarta".');
+    consoleErrorID('botonDameCarta', 'damecarta');
 };
 
 const botonPlantarse = document.getElementById("plantarse");
 if (botonPlantarse) {
     botonPlantarse.addEventListener("click", handleCompruebaMePlanto);
 } else {
-    console.error('botonPlantarse: No se ha encontrado elemento con ID "plantarse"');
+    consoleErrorID('botonPlantarse', 'plantarse');
 };
 
 const botonIniciar = document.getElementById("iniciar");
 if (botonIniciar) {
     botonIniciar.addEventListener("click", handleIniciar);
 } else {
-    console.error('botonIniciar: No se ha encontrado elemento con ID "iniciar"');
+    consoleErrorID('botonIniciar', 'iniciar');
 };
 
 const botonSimular = document.getElementById("simular");
 if (botonSimular) {
     botonSimular.addEventListener("click", handleSimular);
 } else {
-    console.error('botonSimular: No se ha encontrado elemento con ID "simular"');
+    consoleErrorID('botonSimular', 'simular');
 };
