@@ -110,16 +110,16 @@ describe('obtieneCarta', () => {
         const cartasObtenidas : number[] = [];
 
         // Act
-        for (let a : number = 0; a < 8; a++) {
+        for (let a : number = 0; a < 10; a++) {
             cartasObtenidas.push(obtieneCarta());
         };
 
         // Assert            
-        // Debe haber 8 cartas y no más.
-        expect(cartasObtenidas.length).toBe(8);
+        // Debe haber 10 cartas y no más.
+        expect(cartasObtenidas.length).toBe(10);
 
         // Compruebo que las cartas obtenidas están entre las esperadas.
-        for (let a : number = 0; a < 8; a++) {
+        for (let a : number = 0; a < 10; a++) {
             expect(cartasEsperadas).toContain(cartasObtenidas[a]);
             
             const valor : number = valorCarta(cartasObtenidas[a]);
