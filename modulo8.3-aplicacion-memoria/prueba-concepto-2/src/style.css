@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color : rgb(154, 230, 255);
+}
+
+.carta {
+    background-color : rgb(154, 200, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    width: 150px;
+    height: 140px;
+    cursor: pointer;
+    
+};
