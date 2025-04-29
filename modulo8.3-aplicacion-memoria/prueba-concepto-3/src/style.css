@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color : rgb(154, 230, 255);
+}
+
+.grid-de-cartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: rgb(154, 230, 255);
+}
+  
+.carta {
+    background-color: rgb(154, 200, 255);
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+}
+  

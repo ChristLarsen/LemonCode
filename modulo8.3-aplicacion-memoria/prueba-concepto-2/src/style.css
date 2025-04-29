@@ -12,9 +12,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-radius: 20px;
-    width: 150px;
-    height: 140px;
+    border-radius: 12px;
+    width: 180px;
+    height: 180px;
     cursor: pointer;
     
-};
+}

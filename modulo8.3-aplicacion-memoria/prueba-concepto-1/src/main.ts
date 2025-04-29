@@ -23,7 +23,7 @@ const cartas = [...cartasAnimales, ...cartasAnimales];
 // Barajamos las cartas (visto por internet, algoritmo "Fisher-Yates")
 // (devuelvo el mismo array con las cartas barajadas)
 function barajar (cartas: Carta[]): Carta[] {
-
+ 
     for (let i = cartas.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [cartas[i], cartas[j]] = [cartas[j], cartas[i]];
@@ -31,4 +31,4 @@ function barajar (cartas: Carta[]): Carta[] {
     return cartas;
 };
 
-console.log(cartas);
+console.log(barajar(cartas));
