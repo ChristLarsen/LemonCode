@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 16px;
+    background-color : rgb(154, 230, 255);
+}
+
+.cartas {
+    display: flex;
+    gap: 16px;    
+}
+
+.carta {
+    background-color : rgb(154, 200, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
