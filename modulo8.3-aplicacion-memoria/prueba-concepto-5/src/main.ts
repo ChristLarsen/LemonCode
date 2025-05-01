@@ -1,4 +1,5 @@
-// Prueba de concepto 4: Mostrar segunda imagen y volver las dos cartas.
+// Prueba de concepto 5: Aplicación ya final hecha aprovechando las anteriores pruebas de concepto.
+
 import { iniciaJuego } from "./ui";
 
 // Al cargar el DOM, inicia el juego
