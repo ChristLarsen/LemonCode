@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --bg-color: rgb(229, 234, 238);
+  --color-primary: #00ad74;
+  --color-secondary: #008c86;
+  --font-family: Roboto, "Arial", "Helvetica", sans-serif;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  line-height: 1;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.listado-personajes {
+  display : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.personaje-contenedor {
+  flex-direction: column;
+  align-items: center;
+}
+
+.personaje-contenedor img {
+  display: block;
+  margin: 0 auto 60px auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.personaje-contenedor p {
+  text-align: left;
+  width: 100%;
+}
+
+.personaje-contenedor {
+  display: flex;
+  background-color: white;
+  align-items: flex-end;
+  justify-content: space-between;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  gap : 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height : 350px;
+}
+
+.caja-filtrar {
+  display : flex;
+  justify-content: center;
+  width: 300px;
+  padding: 8px;
+  border-color : green;
+  border-radius: 10px;
+}
+
+.contenedor-cabecera {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.boton-filtrar {
+  display : flex;
+  justify-content: center;
+  width: 80px;
+  padding: 8px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.contenedor-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contenedor-h1 {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 1;
+}
+
+.cabecera-h1 {
+  background-color: var(--bg-color);
+  padding: 16px;
+  text-align: center;
+}
+
