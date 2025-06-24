@@ -1,4 +1,7 @@
 # typescript-sandbox
 
-Ejercicio "Mortadelo y Filemón".
+Ejercicio "Expresiones Regulares".
+Apartado "A".
+
+
 
