@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --bg-color: rgb(229, 234, 238);
+  --color-primary: #00ad74;
+  --color-secondary: #008c86;
+  --font-family: Roboto, "Arial", "Helvetica", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.contenedor-caja {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contenedor-h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 30px;
+}
+
+.cabecera-h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.lista-imagenes {
+  display : grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.imagen-contenedor img {
+  display: block;
+  margin: 0 auto 60px auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.imagen-contenedor p {
+  text-align: left;
+  width: 100%;
+}
+
+.imagen-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* o flex-end, según lo que quieras */
+  background-color: white;
+  justify-content: space-between;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 350px;
+}
