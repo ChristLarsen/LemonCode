@@ -1,0 +1,32 @@
+.root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid var(--secondary_color);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.header-container h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+.header-container-saldo {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.header-container-saldo-importe {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary_color);
+    text-align: right;
+}
