@@ -5,7 +5,7 @@ import { AccountListItemComponent } from "./account-list-item.component";
 
 interface Props {
   accountList: AccountVm[];
-}
+};
 
 export const AccountListTableComponent: React.FC<Props> = (props) => {
   const { accountList } = props;

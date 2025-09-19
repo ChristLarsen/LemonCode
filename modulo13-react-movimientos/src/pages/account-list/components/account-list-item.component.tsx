@@ -10,7 +10,7 @@ const ACTION_MOVEMENTS = "2";
 
 interface Props {
   accountItem: AccountVm;
-}
+};
 
 export const AccountListItemComponent: React.FC<Props> = (props) => {
   const { accountItem } = props;
