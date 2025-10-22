@@ -23,6 +23,30 @@
       "name": "Ahorro",
       "balance": 8500,
       "lastTransaction": "2019-11-15T08:29:04"
+    },
+    {
+      "iban": "LV05 ITVO J012 8PUM IL87 6",
+      "name": "MiCuentaAhorro1",
+      "type": "id2",
+      "balance": 0,
+      "lastTransaction": "2025-10-22T15:46:48.756Z",
+      "id": "XE9mxT_"
+    },
+    {
+      "iban": "DK48 6857 7805 0630 56",
+      "name": "MiCuentaAhorro2",
+      "type": "id3",
+      "balance": 0,
+      "lastTransaction": "2025-10-22T15:47:01.438Z",
+      "id": "hyoXfWY"
+    },
+    {
+      "iban": "AE37 0321 8408 9550 0888 038",
+      "name": "Compartida2",
+      "type": "id1",
+      "balance": 0,
+      "lastTransaction": "2025-10-22T16:10:13.960Z",
+      "id": "CSgXLQY"
     }
   ],
   "movements": [

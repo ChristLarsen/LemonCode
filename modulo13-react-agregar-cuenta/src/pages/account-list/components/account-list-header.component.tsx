@@ -8,7 +8,7 @@ export const AccountListHeaderComponent: React.FC = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(generatePath(appRoutes.account));
+    navigate(generatePath(appRoutes.newAccount));
   };
 
   return (

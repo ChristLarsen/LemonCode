@@ -9,6 +9,7 @@ export const NavBarComponent : React.FC = () => {
     // Devuelve la barra de navegación
     // - "Mis Cuentas", se selecciona cuando estoy en la pagina de la lista de cuentas.
     // - "Movimientos", solo aparece si estoy en la pagina de movimientos, y se marca seleccionada.
+    // - "Nueva Cuenta", solo aparece si estoy en la pagina de crear cuenas
     // - "Transferencias", se selecciona cuando estoy en la pagina de transferencias.
     return (
         <nav className={classes.navbar}>
@@ -18,6 +19,10 @@ export const NavBarComponent : React.FC = () => {
                 </li>
                 {pathname.startsWith(routesPrefixes.movements) ?
                     <li className={classes.selected}>Movimientos</li> :
+                    null
+                }
+                {pathname.startsWith(routesPrefixes.newAccount) ?
+                    <li className={classes.selected}>Nueva Cuenta</li> :
                     null
                 }
                 <li className={pathname.startsWith(routesPrefixes.transfer) ? classes.selected : ""}>
